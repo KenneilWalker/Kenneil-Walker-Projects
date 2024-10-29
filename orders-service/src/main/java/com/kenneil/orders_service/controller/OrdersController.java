@@ -22,7 +22,26 @@ public class OrdersController {
 		int apples = order.getApples();
 		int oranges = order.getOranges();
 		double totalCost = (apples * APPLE_PRICE) + (oranges * ORANGE_PRICE);
-		// return orderService.calculateOrder(order);
+		
+		return new OrderSummary(apples, oranges, totalCost);
+	}
+	
+	@PostMapping("order/sale")
+	@ResponseStatus(code = HttpStatus.OK)
+	public OrderSummary getItemsFromOrderSale(@RequestBody Order order) {
+		int apples = order.getApples();
+		int oranges = order.getOranges();
+		
+		//Buy one get one free sale on apples
+		int appleSale = apples * 2;
+		double appleCost = (appleSale * APPLE_PRICE)/2;
+		
+		//3 for the price of 2 on oranges
+		int orangeSale = (oranges/ 3) * 3;
+		double orangeCost = ((orangeSale * 2 * ORANGE_PRICE)/3) + ((oranges % 3)* ORANGE_PRICE);
+		
+		double totalCost = appleCost + orangeCost;
+
 		return new OrderSummary(apples, oranges, totalCost);
 	}
 

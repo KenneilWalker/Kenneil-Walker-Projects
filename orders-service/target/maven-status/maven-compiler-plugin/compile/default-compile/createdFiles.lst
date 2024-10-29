@@ -1,0 +1,4 @@
+com\kenneil\orders_service\controller\OrdersController.class
+com\kenneil\orders_service\model\OrderSummary.class
+com\kenneil\orders_service\controller\Order.class
+com\kenneil\orders_service\OrdersServiceApplication.class

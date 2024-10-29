@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.kenneil.orders_service.OrdersServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.356 s -- in com.kenneil.orders_service.OrdersServiceApplicationTests
