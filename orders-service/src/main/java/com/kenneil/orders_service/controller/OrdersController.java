@@ -42,7 +42,7 @@ public class OrdersController {
 		
 		double totalCost = appleCost + orangeCost;
 
-		return new OrderSummary(apples, oranges, totalCost);
+		return new OrderSummary(appleSale, orangeSale, totalCost);
 	}
 
 }
